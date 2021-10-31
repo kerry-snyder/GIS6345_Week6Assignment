@@ -12,6 +12,8 @@ def most_frequent(w):
             d[char] = 1
     dsorted = dict(sorted(d.items(), key = lambda x:x[1], reverse=True))
     print(dsorted)
+    for char in w:
+        d[char] = 0
 
 #Test the function on a single word
 most_frequent('cormorant')
@@ -24,10 +26,9 @@ German = 'es ist eine allgemein anerkannte wahrheit, dass ein einzelner mann, de
 
 print('English')
 most_frequent(English)
-print('Spanish')
-most_frequent(Spanish)
 print('French')
 most_frequent(French)
 print('German')
 most_frequent(German)
-
+print('Spanish')
+most_frequent(Spanish)
